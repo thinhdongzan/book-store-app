@@ -1,0 +1,89 @@
+/* Nav Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    background: #F2F2F2;
+    border-radius: 20px;
+    margin-right: auto;
+    height: 35px;
+}
+
+.searchBar:hover {
+    background: #E0E0E0;
+}
+
+.searchBar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.searchBar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 300px;
+}
+
+.searchBar input::placeholder {
+    font-family: 'League Spartan', sans-serif;
+    font-size: large;
+}
+
+
+.searchBar button {
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.navbar li a:hover {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.iconLink:hover {
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
