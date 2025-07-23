@@ -1,4 +1,4 @@
-import BookCard from "./BookCard";
+import BookCard from "../BookCard/BookCard";
 import styles from "./BookList.module.css";
 function BookList({title, books}) {
     return (

@@ -1,4 +1,4 @@
-import BookList from "../components/BookList";
+import BookList from "../components/BookListDisplay/BookList";
 import book_1984 from "../assets/images/book/1984.jpg";
 import book_anmangtrentautochanhphuongdong from "../assets/images/book/anmangtrenchuyentautochanhphuongdong.jpg";
 import book_anneofgreengables from "../assets/images/book/anneofgreengables.jpg";
@@ -11,6 +11,9 @@ import book_khonggiadinh from "../assets/images/book/khonggiadinh.jpg";
 import book_mobydick from "../assets/images/book/mobydick.jpg";
 import book_nhungtamlongcaoca from "../assets/images/book/nhungtamlongcaoca.jpg";
 import book_nhagiakim from "../assets/images/book/nhagiakim.jpg";
+import CustomerReview from "../components/CustomerReviewSection/CustomerReview";
+import WhyBuyFromUs from "../components/WhyBuyFromUsSection/WhyBuyFromUs";
+import Benefit from "../components/BenefitOfReadingSection/Benefit";
 
 function Home() {
     const bestSellers = [
@@ -96,6 +99,9 @@ function Home() {
         <div>
             <BookList title="Best Sellers" books={bestSellers} />
             <BookList title="Recommendations for You" books={recommendedBooks} />
+            <CustomerReview />
+            <WhyBuyFromUs />
+            <Benefit />
         </div>
     );
 }

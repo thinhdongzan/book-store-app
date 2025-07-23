@@ -1,12 +1,12 @@
-import styles from './HeroBanner.module.css';
-import MainPane from '../assets/images/herobanner/MainPane.png';
-import AdventurePane from '../assets/images/herobanner/AdventurePane.png';
-import ComicPane from '../assets/images/herobanner/ComicPane.png';
-import FairyTalePane from '../assets/images/herobanner/FairyTalePane.png';
-import HorrorPane from '../assets/images/herobanner/HorrorPane.png';
-import NovelPane from '../assets/images/herobanner/NovelPane.png';
-import RomancePane from '../assets/images/herobanner/RomancePane.png';
-import SelfHelpPane from '../assets/images/herobanner/SelfHelpPane.png';
+import styles from "./HeroBanner.module.css";
+import MainPane from '../../assets/images/herobanner/MainPane.png';
+import AdventurePane from '../../assets/images/herobanner/AdventurePane.png';
+import ComicPane from '../../assets/images/herobanner/ComicPane.png';
+import FairyTalePane from '../../assets/images/herobanner/FairyTalePane.png';
+import HorrorPane from '../../assets/images/herobanner/HorrorPane.png';
+import NovelPane from '../../assets/images/herobanner/NovelPane.png';
+import RomancePane from '../../assets/images/herobanner/RomancePane.png';
+import SelfHelpPane from '../../assets/images/herobanner/SelfHelpPane.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function HeroBanner() {
