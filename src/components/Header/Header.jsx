@@ -4,7 +4,7 @@ import { faSearch, faCartShopping, faUser } from '@fortawesome/free-solid-svg-ic
 function Header() {
     return (
         <header>
-            <div className={styles.logo}>Book Store</div>
+            <div className={styles.logo}>Book Base</div>
             <div className={styles.searchBar}>
                 <button  type="submit"><FontAwesomeIcon icon={faSearch} /></button>
                 <input type="text" placeholder="Search for books..."/>

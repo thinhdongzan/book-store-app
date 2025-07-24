@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: row;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     gap: 100px;
     background: linear-gradient(95deg, #C6FFDD 0%, #FBD786 48%, #F7797D 100%);
     padding: 100px;

@@ -1,3 +1,5 @@
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Header from './components/Header/Header';
 import HeroBanner from './components/HeroSection/HeroBanner';
@@ -6,6 +8,7 @@ import Product from './pages/Product';
 import About from './pages/About';
 import Cart from './pages/Cart';
 import Account from './pages/Account';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +22,7 @@ function App() {
         <Route path='/cart' element={<Cart />} />
         <Route path='/account' element={<Account />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
