@@ -1,0 +1,35 @@
+.breadCump {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    height: 200px;
+    background: linear-gradient(95deg, #C6FFDD 0%, #FBD786 48%, #F7797D 100%);
+    margin-bottom: 50px;
+}
+
+.breadCump h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadCump nav span {
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadCump nav a {
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadCump nav a:hover {
+    color: #f2f2f2;
+}

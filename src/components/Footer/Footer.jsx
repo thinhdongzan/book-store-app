@@ -7,8 +7,8 @@ function Footer() {
         <div className={styles.footer}>
             <div className={styles.footerContent}>
                 <div className={styles.footerCol}>
-                    <h2>Book Base</h2>
-                    <p>At BookBase, our mission is to spread knowledge to all through a curated selection of high-quality books.</p>
+                    <h2>Libro</h2>
+                    <p>At Libro, our mission is to spread knowledge to all through a curated selection of high-quality books.</p>
                     <div className={styles.socialLinks}>
                         <a href="#" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faFacebook} className={styles.footerIcon}/>
@@ -46,7 +46,7 @@ function Footer() {
                     <h2>Contact</h2>
                         <div className={styles.contactInfo}>
                             <p><FontAwesomeIcon icon={faPhone} className={styles.footerIcon} style={{marginRight: '10px'}}/> 0388 165 868</p>
-                            <p><FontAwesomeIcon icon={faEnvelope} className={styles.footerIcon} style={{marginRight: '10px'}}/> bookbase@gmail.com</p>
+                            <p><FontAwesomeIcon icon={faEnvelope} className={styles.footerIcon} style={{marginRight: '10px'}}/> libro@gmail.com</p>
                             <p><FontAwesomeIcon icon={faLocationDot} className={styles.footerIcon} style={{marginRight: '10px'}}/> 123 Duong Lang, Dong Da, Hanoi</p>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ function Footer() {
             <hr />
 
             <div className={styles.footerBottom}>
-                <p>Copyright &copy; 2025 Book Base. All Rights Reserved.</p>
+                <p>Copyright &copy; 2025 Libro. All Rights Reserved.</p>
             </div>
         </div>
     );

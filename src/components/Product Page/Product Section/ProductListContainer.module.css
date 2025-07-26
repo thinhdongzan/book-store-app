@@ -1,0 +1,20 @@
+.productListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.productListContainer hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

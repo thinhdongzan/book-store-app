@@ -14,6 +14,7 @@ import book_nhagiakim from "../assets/images/book/nhagiakim.jpg";
 import CustomerReview from "../components/CustomerReviewSection/CustomerReview";
 import WhyBuyFromUs from "../components/WhyBuyFromUsSection/WhyBuyFromUs";
 import Benefit from "../components/BenefitOfReadingSection/Benefit";
+import HeroBanner from "../components/HeroSection/HeroBanner";
 
 function Home() {
     const bestSellers = [
@@ -97,6 +98,7 @@ function Home() {
 
     return (
         <div>
+            <HeroBanner />
             <BookList title="Best Sellers" books={bestSellers} />
             <BookList title="Recommendations for You" books={recommendedBooks} />
             <CustomerReview />

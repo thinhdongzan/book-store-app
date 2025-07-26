@@ -1,6 +1,9 @@
+import BreadCump from "../components/BreadCump/BreadCump";
 function About() {
     return (
-        <h1>About</h1>
+        <div>
+            <BreadCump page={"About"}/>
+        </div>
     );
 }
 

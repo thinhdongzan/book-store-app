@@ -1,5 +1,4 @@
 import { config } from '@fortawesome/fontawesome-svg-core';
-config.autoAddCss = false;
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Header from './components/Header/Header';
 import HeroBanner from './components/HeroSection/HeroBanner';
@@ -14,7 +13,6 @@ function App() {
   return (
     <Router>
       <Header />
-      <HeroBanner />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product' element={<Product />} />

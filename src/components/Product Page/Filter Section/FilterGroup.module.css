@@ -1,0 +1,126 @@
+.filterGroup {
+    margin-bottom: 20px;
+}
+
+.filterGroup h3 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.filterGroup input[type="checkbox"] {
+    display: none;
+    cursor: pointer;
+}
+
+/* Ô vuông */
+.filterGroup .checkmark {
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    background-color: white;
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    border-radius: 3px;
+}
+
+/* Khi checkbox được chọn */
+.filterGroup input[type="checkbox"]:checked+.checkmark {
+    background-color: black;
+    /* Màu xanh lá đậm */
+}
+
+/* Dấu tick */
+.filterGroup input[type="checkbox"]:checked+.checkmark::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.filterOptions {
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.filterOptions::-webkit-scrollbar {
+    width: 6px;
+}
+
+.filterOptions::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.priceRange {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.priceRange p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, black 50%, #ddd 50%);
+    transition: background 450ms ease-in;
+}
+
+/* Thumb (Webkit browsers: Chrome, Safari) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border: none;
+    position: relative;
+    z-index: 2;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
