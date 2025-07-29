@@ -3,24 +3,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 70px;
     margin-bottom: 20px;
+    background-color: #F6EFDD;
 }
 
 .customerReview h2 {
     font-weight: bold;
     font-size: 60px;
     margin-top: 50px;
-    margin-bottom: 20px;
+    background-color: #334B35;
+    color: #FDAD16;
+    padding-bottom: 0px;
+    border-radius: 50px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+
 }
 
 .reviewList {
-    background: linear-gradient(95deg, #C6FFDD 0%, #FBD786 48%, #F7797D 100%);
+    background: #F6EFDD;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     width: 100%;
     padding: 50px;
+    padding-top: 0px;
 }
 

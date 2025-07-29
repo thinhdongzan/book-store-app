@@ -10,6 +10,13 @@
     font-weight: bold;
     margin-top: 70px;
     margin-bottom: 50px;
+    color: #FDAD16;
+    background-color: #334B35;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-radius: 50px;
 }
 
 .wbfuReasonList {

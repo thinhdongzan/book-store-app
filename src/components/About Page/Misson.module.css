@@ -1,0 +1,52 @@
+.missonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-bottom: 100px;
+}
+
+.missonContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.missonContainer h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.missonContent img {
+    width: 100%;
+    height: 500px;
+}
+
+.missonText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 50px;
+    background-color: #334B35;
+}
+
+.missonText h3 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #FDAD16;
+}
+
+.missonText p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: white;
+}
+
+

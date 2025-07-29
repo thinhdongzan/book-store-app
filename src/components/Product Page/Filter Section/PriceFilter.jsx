@@ -12,8 +12,7 @@ const PriceFilter = () => {
             <h3>Price</h3>
             <div className={styles.priceRange}>
                 <p>0.00$ - {maxPrice}$</p>
-                <input type="range" min="0" max="100" value={maxPrice} onChange={handleMaxPriceChange} style={{ background: `linear-gradient(to right, black 0%, black ${maxPrice}%, #D9D9D9 ${maxPrice}%, #D9D9D9 100%)` }} />
-                
+                <input type="range" min="0" max="100" value={maxPrice} onChange={handleMaxPriceChange} style={{ background: `linear-gradient(to right, #FDAD16 0%, #FDAD16 ${maxPrice}%, #D9D9D9 ${maxPrice}%, #D9D9D9 100%)` }} />
             </div>
         </div>
     );

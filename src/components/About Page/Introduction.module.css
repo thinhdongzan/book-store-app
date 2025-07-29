@@ -1,0 +1,39 @@
+.introContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.introContainer img {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.introContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #F6EFDD;
+}
+
+.introContent h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: black;
+}
+
+.introContent p {
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    line-height: 1.5;
+}
