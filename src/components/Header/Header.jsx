@@ -27,7 +27,13 @@ function Header() {
                     </li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/cart" className={styles.iconLink}><FontAwesomeIcon icon={faCartShopping}/></a></li>
-                    <li><a href="/account" className={styles.iconLink}><FontAwesomeIcon icon={faUser} /></a></li>
+                    <li className={styles.dropdown}>
+                        <a href="/account" className={styles.iconLink}><FontAwesomeIcon icon={faUser} /></a>
+                        <ul className={styles.dropdownMenu}>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
