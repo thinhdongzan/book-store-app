@@ -1,6 +1,12 @@
+import BreadCump from "../components/BreadCump/BreadCump";
+import CartPage from "../components/Cart Page/CartPage";
+
 function Cart() {
     return (
-        <h1>Cart</h1>
+        <div>
+            <BreadCump page="Cart" />
+            <CartPage />
+        </div>
     );
 }
 

@@ -1,0 +1,32 @@
+.cartPageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.cartPageHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.cartPageHeader h3:nth-child(1) {
+    margin-left: 225px;
+}
+
+.cartPageHeader h3:nth-child(2) {
+    margin-left: 425px;
+}
+
+.cartPageHeader h3:nth-child(3) {
+    margin-left: 85px;
+}
+
+.cartPageHeader h3:nth-child(4) {
+    margin-left: 85px;
+}

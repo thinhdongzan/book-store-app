@@ -4,6 +4,18 @@ import BreadCump from "../components/BreadCump/BreadCump";
 import styles from "./BookDetail.module.css";
 import { useState } from "react";
 import Toast from "../components/Toast";
+
+function addToCart(book, amount) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingBook = cart.find(item => item.id === book.id);
+    if (existingBook) {
+        existingBook.amount += amount;
+    } else {
+        cart.push({ ...book, amount });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 const BookDetail = () => {
     const { id } = useParams();
     const book = books.find(book => book.id === parseInt(id));
@@ -25,6 +37,7 @@ const BookDetail = () => {
 
     const [showToast, setShowToast] = useState(false);
     const handleAddToCart = () => {
+        addToCart(book, amount);
         setShowToast(true);
         setTimeout(() => {
             setShowToast(false);

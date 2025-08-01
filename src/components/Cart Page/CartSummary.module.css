@@ -1,0 +1,49 @@
+.cartSummaryCard {
+    background-color: #F6EFDD;
+    padding: 20px;
+    width: 300px;
+    height: 100%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.cartSummaryDetail {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartSummaryCard h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.summaryItem {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.cartSummaryButton {
+    width: 100%;
+    background-color: #E97200;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.cartSummaryButton:hover {
+    background-color: #F68C1F;
+    color: white;
+    cursor: pointer;
+}
+
+.cartSummaryCard hr {
+    width: 100%;
+    border: 1px solid black;
+}
