@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import BreadCump from "../components/BreadCump/BreadCump";
 import styles from "./BookDetail.module.css";
 import { useState } from "react";
+import Toast from "../components/Toast";
 const BookDetail = () => {
     const { id } = useParams();
     const book = books.find(book => book.id === parseInt(id));
@@ -13,11 +14,21 @@ const BookDetail = () => {
     const [amount, setAmount] = useState(1);
 
     const handleAmount = (type) => {
-        if (type === "increase") {
+        if (type === "decrease") {
+            if (amount > 1) {
+                setAmount(amount - 1);
+            }
+        } else{
             setAmount(amount + 1);
-        } else {
-            setAmount(amount - 1);
         }
+    }
+
+    const [showToast, setShowToast] = useState(false);
+    const handleAddToCart = () => {
+        setShowToast(true);
+        setTimeout(() => {
+            setShowToast(false);
+        }, 3000);
     }
     return (
         <div>
@@ -36,9 +47,10 @@ const BookDetail = () => {
                         <span>{amount}</span>
                         <button onClick={() => handleAmount("increase")} className={styles.rightButton}>+</button>
                     </div>
-                    <button className={styles.addToCart}>Add to Cart</button>
+                    <button className={styles.addToCart} onClick={handleAddToCart}>Add to Cart</button>
                 </div>
             </div>
+            {showToast && <Toast message="Added to Cart Successfully" onClose={() => setShowToast(false)} />}
         </div>
     );
 }

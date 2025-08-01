@@ -2,6 +2,7 @@ import styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <div className={styles.footer}>
@@ -36,9 +37,9 @@ function Footer() {
                 <div className={styles.footerCol}>
                     <h2>Explore</h2>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/product">Product</a></li>
+                        <li><a href="/about">About Us</a></li>
                     </ul>
                 </div>
                 <div className={styles.footerCol}>
