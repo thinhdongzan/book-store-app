@@ -3,7 +3,21 @@ function Benefit() {
     return (
         <section className={styles.benefit}>
             <div className={styles.benefit_video}>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/pRTWFqhEDeo?si=VWc8nOMIhIZycxPj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/pRTWFqhEDeo?si=VWc8nOMIhIZycxPj" 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen
+                    style={{
+                        maxWidth: '100%',
+                        height: 'auto',
+                        aspectRatio: '16/9'
+                    }}
+                ></iframe>
             </div>
             <div className={styles.benefit_content}>
                 <h2>The Benefits of Reading Books</h2>

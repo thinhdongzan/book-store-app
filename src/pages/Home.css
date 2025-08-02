@@ -1,0 +1,18 @@
+/* Home page responsive styles */
+.home-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Responsive spacing for sections */
+@media (max-width: 768px) {
+    .home-container > * {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container > * {
+        margin-bottom: 20px;
+    }
+}

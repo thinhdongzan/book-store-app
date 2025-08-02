@@ -34,3 +34,32 @@
     padding-top: 0px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .customerReview h2 {
+        font-size: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 30px;
+    }
+    
+    .reviewList {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .customerReview h2 {
+        font-size: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+    }
+    
+    .reviewList {
+        padding: 20px 10px;
+        gap: 15px;
+    }
+}
+

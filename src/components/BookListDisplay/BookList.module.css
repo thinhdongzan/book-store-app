@@ -4,6 +4,7 @@
     align-items: center;
     margin-left: 200px;
     margin-right: 200px;
+    padding: 0 20px;
 }
 
 .bookListTitle {
@@ -27,4 +28,58 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .bookSection {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    .bookListTitle {
+        font-size: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .bookList {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bookSection {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    .bookListTitle {
+        font-size: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 30px;
+    }
+    
+    .bookList {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bookSection {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .bookListTitle {
+        font-size: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+    }
+    
+    .bookList {
+        gap: 20px;
+    }
 }
