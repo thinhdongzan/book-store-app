@@ -13,7 +13,7 @@ This project is designed as a full-stack application using **React** for the fro
 - 💳 Checkout and order confirmation
 - 🧾 Order history for logged-in users
 
---
+---
 
 ## 🧰 Tech Stack
 
