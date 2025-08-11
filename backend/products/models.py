@@ -17,8 +17,8 @@ class Book(models.Model):
         VIETNAMESE = 'vi'
     title = models.CharField(max_length=255)
     description = models.TextField()
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
+    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE, default=1)
     author = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     published_date = models.DateField()
