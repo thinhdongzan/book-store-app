@@ -7,7 +7,7 @@ function BookCard({book}) {
     }
     return (
         <div className={styles.bookCard} onClick={handleClick}>
-            <img src={book.img} alt={book.title} />
+            <img src={book.image} alt={book.title} />
             <h3>{book.title}</h3>
             <p>{book.price} $</p>
         </div>
