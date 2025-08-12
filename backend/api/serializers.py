@@ -14,7 +14,7 @@ class PublisherSerializer(serializers.ModelSerializer):
 class BookSerializer(serializers.ModelSerializer):
     category = CategorySerializer(read_only=True)
     publisher = PublisherSerializer(read_only=True)
-    
     class Meta:
         model = Book
         fields = '__all__'
+
