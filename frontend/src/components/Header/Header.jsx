@@ -28,10 +28,10 @@ function Header() {
                     <li><a href="/about">About</a></li>
                     <li><a href="/cart" className={styles.iconLink}><FontAwesomeIcon icon={faCartShopping}/></a></li>
                     <li className={styles.dropdown}>
-                        <a href="/account" className={styles.iconLink}><FontAwesomeIcon icon={faUser} /></a>
+                        <a href='#' className={styles.iconLink}><FontAwesomeIcon icon={faUser} /></a>
                         <ul className={styles.dropdownMenu}>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Register</a></li>
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/register">Register</a></li>
                         </ul>
                     </li>
                 </ul>
