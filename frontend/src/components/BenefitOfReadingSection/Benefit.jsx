@@ -1,30 +1,15 @@
-import styles from './Benefit.module.css';
 function Benefit() {
     return (
-        <section className={styles.benefit}>
-            <div className={styles.benefit_video}>
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/pRTWFqhEDeo?si=VWc8nOMIhIZycxPj" 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    allowFullScreen
-                    style={{
-                        maxWidth: '100%',
-                        height: 'auto',
-                        aspectRatio: '16/9'
-                    }}
-                ></iframe>
+        <div className="flex flex-row items-center justify-space-around bg-[#334B35] text-white p-10 py-20 mt-10 gap-10 h-[500px]">
+            <div className="w-1/2 flex flex-col items-center justify-center h-full">
+                <iframe className="w-full h-full" src="https://www.youtube.com/embed/pRTWFqhEDeo?si=VWc8nOMIhIZycxPj" frameborder="0"></iframe>
             </div>
-            <div className={styles.benefit_content}>
-                <h2>The Benefits of Reading Books</h2>
-                <p>Reading books enhances your knowledge, sharpens your focus, and boosts creativity. Discover how just 15 minutes a day can change your life.</p>
+            <div className="w-1/2 flex flex-col items-start justify-center gap-4 h-full pl-10">
+                <h2 className="text-6xl font-bold text-[#FDAD16]">The Benefits of Reading Books</h2>
+                <p className="text-2xl text-white">Reading books enhances your knowledge, sharpens your focus, and boosts creativity. Discover how just 15 minutes a day can change your life.</p>
             </div>
-        </section>
-    );
+        </div>
+    )
 }
 
 export default Benefit;

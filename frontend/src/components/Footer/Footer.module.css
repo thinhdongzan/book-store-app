@@ -85,29 +85,21 @@ hr {
 
 .footerIcon {
     width: 20px;
-    /* Hoặc kích thước bạn muốn */
     vertical-align: middle;
 }
 
 .socialLinks {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .socialLinks a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-color: #334B35;
     transition: background-color 0.3s ease;
-}
-
-.socialLinks a:hover {
-    background-color: #FDAD16;
 }
 
 .contactInfo p {
