@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     'users',
     'orders',
     'cart',
+    'rest_framework_simplejwt.token_blacklist',
 ]
 
 MIDDLEWARE = [
