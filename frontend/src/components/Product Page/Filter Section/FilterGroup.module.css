@@ -7,6 +7,7 @@
     font-weight: 600;
     margin-bottom: 15px;
 }
+
 .filterGroup input[type="checkbox"] {
     display: none;
     cursor: pointer;
@@ -116,6 +117,72 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
     border: none;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .filterGroup h3 {
+        font-size: 22px;
+    }
+    
+    label {
+        font-size: 16px;
+    }
+    
+    .priceRange p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filterGroup {
+        margin-bottom: 15px;
+    }
+    
+    .filterGroup h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    label {
+        font-size: 15px;
+        justify-content: center;
+    }
+    
+    .priceRange {
+        padding: 15px 0;
+    }
+    
+    .priceRange p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filterGroup {
+        margin-bottom: 12px;
+    }
+    
+    .filterGroup h3 {
+        font-size: 18px;
+    }
+    
+    label {
+        font-size: 14px;
+    }
+    
+    .priceRange {
+        padding: 12px 0;
+        gap: 12px;
+    }
+    
+    .priceRange p {
+        font-size: 14px;
+    }
+    
+    .filterOptions {
+        max-height: 150px;
+    }
 }
 
 

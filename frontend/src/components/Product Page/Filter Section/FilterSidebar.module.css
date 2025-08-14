@@ -11,4 +11,43 @@
 }
 
 .filterSection {
+    min-width: 250px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+    .filterSection {
+        min-width: 220px;
+        padding: 1.25rem;
+    }
+    
+    .filterSection h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filterSection {
+        min-width: 100%;
+        padding: 1rem;
+    }
+    
+    .filterSection h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .filterSection {
+        padding: 0.75rem;
+    }
+    
+    .filterSection h2 {
+        font-size: 22px;
+    }
 }

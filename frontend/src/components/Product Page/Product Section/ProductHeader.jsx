@@ -1,8 +1,12 @@
 import styles from "./ProductHeader.module.css";
-const ProductHeader = () => {
+
+const ProductHeader = ({ currentPage, booksPerPage, totalBooks }) => {
+    const startIndex = (currentPage - 1) * booksPerPage + 1;
+    const endIndex = Math.min(currentPage * booksPerPage, totalBooks);
+    
     return (
         <div className={styles.productHeader}>
-            <h2>Showing 1-12 of 100 results</h2>
+            <h2>Showing {startIndex}-{endIndex} of {totalBooks} results</h2>
             <div className={styles.sortingOptions}>
                 <p>Sort by: </p>
                 <select name="sort" id="sort" className={styles.sortingSelect}>

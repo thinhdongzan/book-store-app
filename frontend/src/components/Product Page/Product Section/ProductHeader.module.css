@@ -3,13 +3,19 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    margin-left: 50px;
     width: 100%;
+    padding: 1rem 0;
+    min-height: 0;
+    overflow: hidden;
 }
 
 .productHeader h2 {
     font-size: 30px;
     font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
 }
 
 .sortingOptions {
@@ -18,11 +24,13 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 .sortingOptions p {
     font-size: 20px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .sortingSelect {
@@ -33,6 +41,76 @@
     border: 1px solid #000;
     box-sizing: border-box;
     margin-bottom: 15px;
+    min-width: 120px;
+}
+
+@media (max-width: 1024px) {
+    .productHeader h2 {
+        font-size: 26px;
+        max-width: 55%;
+    }
+    
+    .sortingOptions p,
+    .sortingSelect {
+        font-size: 18px;
+    }
+    
+    .sortingSelect {
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .productHeader {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 0.75rem 0;
+        width: 100%;
+        max-width: 500px; /* Limit width for better centering */
+        margin: 0 auto; /* Center the header */
+    }
+    
+    .productHeader h2 {
+        font-size: 24px;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .sortingOptions p,
+    .sortingSelect {
+        font-size: 16px;
+    }
+    
+    .sortingSelect {
+        min-width: 90px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productHeader {
+        padding: 0.5rem 0;
+        max-width: 400px; /* Adjust width for smaller screens */
+    }
+    
+    .productHeader h2 {
+        font-size: 22px;
+    }
+    
+    .sortingOptions p,
+    .sortingSelect {
+        font-size: 14px;
+    }
+    
+    .sortingOptions {
+        gap: 8px;
+    }
+    
+    .sortingSelect {
+        min-width: 80px;
+        margin-bottom: 8px;
+    }
 }
 
 
