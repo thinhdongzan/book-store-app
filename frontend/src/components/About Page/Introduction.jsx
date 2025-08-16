@@ -9,10 +9,11 @@ const Introduction = () => {
                 <h2 className="text-6xl font-bold">About Us</h2>
                 <p className="text-2xl">Libro is where the love of reading begins – a place where you’ll find not only great books, but also inspiration, knowledge, and a sense of connection with a community of book lovers. Whether you're a lifelong reader or just starting your reading journey, Libro is here to welcome you.</p>
                 <div className="flex flex-row items-center justify-center gap-4">
-                    <button className="bg-[#FDAD16] text-black px-4 py-2 rounded-md">Read More</button>
+                    <button className="bg-[#FDAD16] text-black px-4 py-2 rounded-md hover:bg-[#FDAD16]/80 transition-all duration-300">Read More</button>
                 </div>
             </div>
         </div>
+
     );
 }
 

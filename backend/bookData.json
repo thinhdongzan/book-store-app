@@ -1,0 +1,802 @@
+[
+    {
+        "model": "products.Book",
+        "pk": 1,
+        "fields": {
+            "title": "1984",
+            "description": "A dystopian novel by George Orwell, published in 1949. It is a story of a totalitarian society where the government controls all aspects of life, including thought and information. The novel is a warning about the dangers of totalitarianism and the importance of individual freedom.",
+            "category": 2,
+            "publisher": 1,
+            "author": "George Orwell",
+            "price": 10.99,
+            "published_date": "1949-06-08",
+            "image": "books/1984.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 2,
+        "fields": {
+            "title": "Bí Mật Của Sự May Mắn",
+            "description": "Cuốn sách truyền cảm hứng về cách tạo ra may mắn trong cuộc sống thông qua sự kiên trì, nỗ lực và thái độ tích cực. Một câu chuyện ngụ ngôn hiện đại giúp bạn nhận ra giá trị của việc chủ động tạo ra cơ hội cho chính mình.",
+            "category": 1,
+            "publisher": 2,
+            "author": "Álex Rovira & Fernando Trías de Bes",
+            "price": 7.99,
+            "published_date": "2004-06-08",
+            "image": "books/bimatcuasumayman.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 3,
+        "fields": {
+            "title": "Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông",
+            "description": "Một trong những tác phẩm trinh thám nổi tiếng nhất của Agatha Christie, kể về vụ án mạng bí ẩn trên chuyến tàu tốc hành phương Đông với thám tử Hercule Poirot. Câu chuyện hấp dẫn với nhiều tình tiết bất ngờ và logic sắc bén.",
+            "category": 2,
+            "publisher": 3,
+            "author": "Agatha Christie",
+            "price": 9.49,
+            "published_date": "1934-06-08",
+            "image": "books/anmangtrenchuyentautochanhphuongdong.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 4,
+        "fields": {
+            "title": "Anne of Green Gables",
+            "description": "A beloved classic about Anne Shirley, an imaginative and spirited orphan girl who finds a home at Green Gables. The novel explores themes of family, friendship, and the beauty of nature in rural Canada.",
+            "category": 6,
+            "publisher": 4,
+            "author": "L. M. Montgomery",
+            "price": 8.59,
+            "published_date": "1908-06-08",
+            "image": "books/anneofgreengables.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 5,
+        "fields": {
+            "title": "Bản Đồ Tâm Hồn Con Người Của Jung",
+            "description": "Cuốn sách giới thiệu về tâm lý học phân tích của Carl Jung, giúp độc giả hiểu về cấu trúc tâm hồn con người, các nguyên mẫu và quá trình phát triển cá nhân. Một tài liệu quý giá cho việc khám phá bản thân.",
+            "category": 1,
+            "publisher": 5,
+            "author": "Murray Stein",
+            "price": 12.99,
+            "published_date": "1998-06-08",
+            "image": "books/bandotamhonconnguoicuajung.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 6,
+        "fields": {
+            "title": "Bố Già",
+            "description": "Tiểu thuyết trinh thám đặc sắc của nhà văn Nguyễn Đình Tú, kể về những vụ án mạng bí ẩn và hành trình điều tra của cảnh sát. Tác phẩm kết hợp giữa yếu tố trinh thám và phân tích tâm lý tội phạm.",
+            "category": 2,
+            "publisher": 6,
+            "author": "Nguyễn Đình Tú",
+            "price": 6.99,
+            "published_date": "2012-06-08",
+            "image": "books/bogia.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 7,
+        "fields": {
+            "title": "Bóng Hình Của Gió",
+            "description": "Tiểu thuyết bí ẩn lãng mạn của tác giả Tây Ban Nha, kể về một cậu bé phát hiện ra một cuốn sách bí ẩn và hành trình khám phá những bí mật của Barcelona. Một câu chuyện đầy ma mị và lãng mạn.",
+            "category": 2,
+            "publisher": 7,
+            "author": "Carlos Ruiz Zafón",
+            "price": 11.49,
+            "published_date": "2001-06-08",
+            "image": "books/bonghinhcuagio.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 8,
+        "fields": {
+            "title": "Brave New World",
+            "description": "A dystopian novel that explores a futuristic society where people are genetically engineered and conditioned to serve society. The novel examines themes of technology, control, and the price of happiness.",
+            "category": 2,
+            "publisher": 8,
+            "author": "Aldous Huxley",
+            "price": 9.99,
+            "published_date": "1932-06-08",
+            "image": "books/bravenewworld.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 9,
+        "fields": {
+            "title": "Chạm Tới Giấc Mơ",
+            "description": "Cuốn sách truyền cảm hứng về hành trình theo đuổi ước mơ và khám phá bản thân. Thông qua câu chuyện của Sơn Tùng M-TP, tác giả gửi gắm những bài học sâu sắc về niềm tin, lòng dũng cảm và sức mạnh của ước mơ.",
+            "category": 1,
+            "publisher": 9,
+            "author": "Sơn Tùng M-TP",
+            "price": 8.99,
+            "published_date": "2020-06-08",
+            "image": "books/chamtoigiacmo.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 10,
+        "fields": {
+            "title": "Chuyện Con Mèo Dạy Hải Âu Bay",
+            "description": "Một câu chuyện ngụ ngôn đẹp đẽ về tình bạn, lòng dũng cảm và việc vượt qua những giới hạn của bản thân. Thông qua mối quan hệ giữa mèo Zorba và chú hải âu nhỏ, tác giả gửi gắm những thông điệp nhân văn sâu sắc.",
+            "category": 4,
+            "publisher": 10,
+            "author": "Luis Sepúlveda",
+            "price": 7.49,
+            "published_date": "1996-06-08",
+            "image": "books/chuyenconmeodayhaiaubay.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 11,
+        "fields": {
+            "title": "Con Đường Đi Đến Thành Công Bằng Sự Tử Tế",
+            "description": "Cuốn sách kinh điển về phát triển kỹ năng giao tiếp và xây dựng sự tự tin. Tác giả chia sẻ những nguyên tắc vàng để thành công trong cuộc sống và công việc thông qua việc phát triển kỹ năng xã hội.",
+            "category": 1,
+            "publisher": 11,
+            "author": "Dale Carnegie",
+            "price": 9.99,
+            "published_date": "1936-06-08",
+            "image": "books/conduongdidenthanhcongbangsutute.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 12,
+        "fields": {
+            "title": "Cuốn Sách Hoàn Hảo Về Ngôn Ngữ Cơ Thể",
+            "description": "Hướng dẫn toàn diện về cách đọc và sử dụng ngôn ngữ cơ thể trong giao tiếp. Cuốn sách giúp bạn hiểu được những thông điệp ẩn sau các cử chỉ, tư thế và biểu cảm của con người.",
+            "category": 1,
+            "publisher": 12,
+            "author": "Allan & Barbara Pease",
+            "price": 10.49,
+            "published_date": "1981-06-08",
+            "image": "books/cuonsachhoanhaovengonngucothe.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 13,
+        "fields": {
+            "title": "Đắc Nhân Tâm",
+            "description": "Cuốn sách kinh điển về nghệ thuật đối nhân xử thế và thu phục lòng người. Tác giả chia sẻ những nguyên tắc vàng để thành công trong giao tiếp và xây dựng mối quan hệ tốt đẹp với mọi người.",
+            "category": 1,
+            "publisher": 13,
+            "author": "Dale Carnegie",
+            "price": 8.99,
+            "published_date": "1936-06-08",
+            "image": "books/dacnhantam.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 14,
+        "fields": {
+            "title": "Dấu Chân Trên Cát",
+            "description": "Tiểu thuyết lịch sử về Ai Cập cổ đại, kể về cuộc đời của Sinuhe, một thầy thuốc trong triều đình Pharaoh. Tác phẩm đưa độc giả vào thế giới Ai Cập cổ đại với những bí ẩn và văn hóa độc đáo.",
+            "category": 2,
+            "publisher": 14,
+            "author": "Mika Waltari",
+            "price": 11.99,
+            "published_date": "1945-06-08",
+            "image": "books/dauchantrencat.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 15,
+        "fields": {
+            "title": "Dế Mèn Phiêu Lưu Ký",
+            "description": "Tập truyện ngắn đặc sắc của nhà văn Nguyễn Huy Thiệp, khám phá những góc khuất của xã hội và tâm hồn con người. Những câu chuyện đầy tính nhân văn và triết lý sâu sắc.",
+            "category": 2,
+            "publisher": 15,
+            "author": "Nguyễn Huy Thiệp",
+            "price": 6.99,
+            "published_date": "1989-06-08",
+            "image": "books/demenphieuluuky.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 16,
+        "fields": {
+            "title": "Đôi Lứa Xứng Đôi Nửa Đêm Cuối",
+            "description": "Tiểu thuyết lãng mạn kinh điển của Jane Austen, kể về mối tình giữa Elizabeth Bennet và Mr. Darcy. Tác phẩm khám phá các chủ đề về tình yêu, hôn nhân và địa vị xã hội trong thế kỷ 19.",
+            "category": 6,
+            "publisher": 1,
+            "author": "Jane Austen",
+            "price": 9.49,
+            "published_date": "1813-06-08",
+            "image": "books/doiluaxungdoinuademcuoi.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 17,
+        "fields": {
+            "title": "Giết Con Chim Nhại",
+            "description": "Tiểu thuyết nổi tiếng về chủ nghĩa phân biệt chủng tộc ở miền Nam nước Mỹ. Thông qua góc nhìn của cô bé Scout, tác giả khám phá các chủ đề về công lý, lòng dũng cảm và sự vô tội của trẻ thơ.",
+            "category": 2,
+            "publisher": 2,
+            "author": "Harper Lee",
+            "price": 10.99,
+            "published_date": "1960-06-08",
+            "image": "books/gietconchimnhai.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 18,
+        "fields": {
+            "title": "Hành Trình Của Linh Hồn",
+            "description": "Cuốn sách khám phá về thế giới tâm linh và hành trình của linh hồn qua các kiếp sống. Tác giả chia sẻ những trải nghiệm thôi miên hồi quy để tìm hiểu về cuộc sống trước và sau khi chết.",
+            "category": 1,
+            "publisher": 3,
+            "author": "Michael Newton",
+            "price": 12.49,
+            "published_date": "1994-06-08",
+            "image": "books/hanhtrinhcualinhhon.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 19,
+        "fields": {
+            "title": "Invisible Man",
+            "description": "A powerful novel about race and identity in America, following an unnamed African American narrator who considers himself socially invisible. The novel explores themes of racism, identity, and the American Dream.",
+            "category": 2,
+            "publisher": 4,
+            "author": "Ralph Ellison",
+            "price": 11.99,
+            "published_date": "1952-06-08",
+            "image": "books/invisibleman.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 20,
+        "fields": {
+            "title": "Không Gia Đình",
+            "description": "Câu chuyện cảm động về cậu bé Rémi mồ côi và hành trình phiêu lưu khắp nước Pháp cùng đoàn xiếc. Tác phẩm ca ngợi tình bạn, lòng dũng cảm và khát khao tìm về gia đình.",
+            "category": 7,
+            "publisher": 5,
+            "author": "Hector Malot",
+            "price": 8.99,
+            "published_date": "1878-06-08",
+            "image": "books/khonggiadinh.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 21,
+        "fields": {
+            "title": "Kinh Tế Học Dành Cho Đại Chúng",
+            "description": "Cuốn sách giải thích các nguyên lý kinh tế học một cách dễ hiểu và thực tế, giúp đại chúng hiểu được cách vận hành của thị trường và đưa ra quyết định kinh doanh thông minh.",
+            "category": 1,
+            "publisher": 6,
+            "author": "Steven E. Landsburg",
+            "price": 13.99,
+            "published_date": "2005-06-08",
+            "image": "books/kinhtehocdanhchodaichung.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 22,
+        "fields": {
+            "title": "Làm Bạn Với Hình, Làm Tình Với Chữ",
+            "description": "Tập truyện ngắn đặc sắc của nhà văn Nguyễn Duy, khám phá mối quan hệ giữa con người với nghệ thuật và văn chương. Những câu chuyện đầy tính triết lý và nhân văn.",
+            "category": 2,
+            "publisher": 7,
+            "author": "Nguyễn Duy",
+            "price": 7.49,
+            "published_date": "2008-06-08",
+            "image": "books/lambanvoihinhlamtinhvoichu.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 23,
+        "fields": {
+            "title": "Lord of the Rings",
+            "description": "An epic fantasy novel about the quest to destroy a powerful ring and save Middle-earth from darkness. The story follows Frodo Baggins and his companions on their journey through a richly imagined world.",
+            "category": 7,
+            "publisher": 8,
+            "author": "J.R.R. Tolkien",
+            "price": 15.99,
+            "published_date": "1954-06-08",
+            "image": "books/lordoftherings.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 24,
+        "fields": {
+            "title": "Mật Mã Da Vinci",
+            "description": "Tiểu thuyết trinh thám giả tưởng về hành trình giải mã những bí ẩn trong tác phẩm của Leonardo da Vinci. Câu chuyện kết hợp giữa lịch sử, nghệ thuật và những âm mưu tôn giáo.",
+            "category": 7,
+            "publisher": 9,
+            "author": "Dan Brown",
+            "price": 12.99,
+            "published_date": "2003-06-08",
+            "image": "books/matmadavinci.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 25,
+        "fields": {
+            "title": "Sapiens",
+            "description": "A book about the history of humanity, from the Stone Age to the present day. The book explores themes of evolution, technology, and the future of humanity. This book is a must-read for anyone who wants to understand the history of humanity.",
+            "category": 7,
+            "publisher": 10,
+            "author": "Yuval Noah Harari",
+            "price": 11.49,
+            "published_date": "2014-06-08",
+            "image": "books/sapiens.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 26,
+        "fields": {
+            "title": "Mùa Hè Năm Ấy",
+            "description": "Tiểu thuyết lãng mạn về tình yêu tuổi học trò và những kỷ niệm đẹp của mùa hè. Tác phẩm đưa độc giả trở về với những cảm xúc trong sáng và ngây thơ của tuổi trẻ.",
+            "category": 6,
+            "publisher": 11,
+            "author": "Đặng Huỳnh Mai Anh",
+            "price": 8.99,
+            "published_date": "2008-06-08",
+            "image": "books/muahenamay.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 27,
+        "fields": {
+            "title": "Muôn Kiếp Nhân Sinh",
+            "description": "Cuốn sách khám phá về luân hồi và nghiệp quả trong đạo Phật. Tác giả chia sẻ những hiểu biết sâu sắc về cuộc sống, cái chết và mục đích của sự tồn tại con người.",
+            "category": 1,
+            "publisher": 12,
+            "author": "Nguyên Phong",
+            "price": 10.99,
+            "published_date": "2017-06-08",
+            "image": "books/muonkiepnhansinh.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 28,
+        "fields": {
+            "title": "Nhà Giả Kim",
+            "description": "Câu chuyện ngụ ngôn về hành trình tìm kiếm kho báu và khám phá bản thân của Santiago. Tác phẩm truyền cảm hứng về việc theo đuổi ước mơ và lắng nghe tiếng nói của trái tim.",
+            "category": 4,
+            "publisher": 13,
+            "author": "Paulo Coelho",
+            "price": 9.99,
+            "published_date": "1988-06-08",
+            "image": "books/nhagiakim.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 29,
+        "fields": {
+            "title": "Nhóc Nicolas Và Những Chuyện Chưa Kể",
+            "description": "Tập truyện hài hước về cậu bé Nicolas và những câu chuyện vui nhộn ở trường học. Tác phẩm đưa độc giả trở về với thế giới trẻ thơ đầy hồn nhiên và ngây thơ.",
+            "category": 3,
+            "publisher": 14,
+            "author": "René Goscinny",
+            "price": 7.99,
+            "published_date": "1959-06-08",
+            "image": "books/nhocnicolasvanhungchuyenchuake.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 30,
+        "fields": {
+            "title": "Những Kẻ Xuất Chúng",
+            "description": "Cuốn sách phân tích những yếu tố tạo nên sự thành công của những người xuất chúng. Tác giả khám phá vai trò của cơ hội, văn hóa và thời điểm trong việc tạo ra những thiên tài.",
+            "category": 1,
+            "publisher": 15,
+            "author": "Malcolm Gladwell",
+            "price": 12.49,
+            "published_date": "2008-06-08",
+            "image": "books/nhungkexuatchung.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 31,
+        "fields": {
+            "title": "Những Người Khốn Khổ",
+            "description": "Tiểu thuyết vĩ đại về cuộc đời của Jean Valjean và những người khốn khổ trong xã hội Pháp thế kỷ 19. Tác phẩm ca ngợi tình yêu thương, lòng nhân ái và khát khao công lý.",
+            "category": 2,
+            "publisher": 1,
+            "author": "Victor Hugo",
+            "price": 14.99,
+            "published_date": "1862-06-08",
+            "image": "books/nhungnguoikhonkho.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 32,
+        "fields": {
+            "title": "Những Tấm Lòng Cao Cả",
+            "description": "Tiểu thuyết giáo dục về cuộc sống học đường và những bài học về tình bạn, lòng dũng cảm và sự hy sinh. Tác phẩm đã trở thành kinh điển trong văn học thiếu nhi thế giới.",
+            "category": 2,
+            "publisher": 2,
+            "author": "Edmondo De Amicis",
+            "price": 9.99,
+            "published_date": "1886-06-08",
+            "image": "books/nhungtamlongcaoca.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 33,
+        "fields": {
+            "title": "Ông Già Và Biển Cả",
+            "description": "Tiểu thuyết về cuộc chiến đấu của ông lão Santiago với con cá kiếm khổng lồ. Tác phẩm ca ngợi tinh thần kiên cường và ý chí không khuất phục trước khó khăn của con người.",
+            "category": 2,
+            "publisher": 3,
+            "author": "Ernest Hemingway",
+            "price": 8.99,
+            "published_date": "1952-06-08",
+            "image": "books/onggiavabienca.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 34,
+        "fields": {
+            "title": "Pride and Prejudice",
+            "description": "A classic romance novel about the relationship between Elizabeth Bennet and Mr. Darcy. The novel explores themes of love, marriage, and social class in 19th century England.",
+            "category": 6,
+            "publisher": 4,
+            "author": "Jane Austen",
+            "price": 9.99,
+            "published_date": "1813-06-08",
+            "image": "books/prideandprejudice.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 35,
+        "fields": {
+            "title": "Sổ Tay Nhà Thôi Miên",
+            "description": "Tập thơ nổi tiếng của nhà thơ Nguyễn Bính, thể hiện tình yêu quê hương và những cảm xúc sâu lắng về cuộc sống. Những vần thơ đậm chất dân gian và tình cảm chân thành.",
+            "category": 2,
+            "publisher": 5,
+            "author": "Nguyễn Bính",
+            "price": 6.99,
+            "published_date": "1941-06-08",
+            "image": "books/sotaynhathoimien.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 36,
+        "fields": {
+            "title": "Tam Quốc Diễn Nghĩa",
+            "description": "Tiểu thuyết lịch sử vĩ đại về thời kỳ Tam Quốc ở Trung Quốc. Tác phẩm kể về những cuộc chiến tranh, mưu lược và anh hùng trong lịch sử Trung Hoa cổ đại.",
+            "category": 2,
+            "publisher": 6,
+            "author": "La Quán Trung",
+            "price": 16.99,
+            "published_date": "1522-06-08",
+            "image": "books/tamquocdiennghia.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 37,
+        "fields": {
+            "title": "The Alchemist",
+            "description": "A philosophical novel about a young Andalusian shepherd who dreams of finding a worldly treasure. The story explores themes of destiny, personal legend, and the importance of following one's dreams.",
+            "category": 4,
+            "publisher": 7,
+            "author": "Paulo Coelho",
+            "price": 10.99,
+            "published_date": "1988-06-08",
+            "image": "books/thealchemist.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 38,
+        "fields": {
+            "title": "The Catcher in the Rye",
+            "description": "A classic coming-of-age novel about Holden Caulfield, a teenager struggling with alienation and loss of innocence in post-World War II America. The novel explores themes of identity, belonging, and the transition to adulthood.",
+            "category": 2,
+            "publisher": 8,
+            "author": "J.D. Salinger",
+            "price": 9.99,
+            "published_date": "1951-06-08",
+            "image": "books/thecatcherintherye.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 39,
+        "fields": {
+            "title": "Thế Giới Phẳng",
+            "description": "Cuốn sách phân tích về toàn cầu hóa và cách thế giới trở nên 'phẳng' hơn nhờ công nghệ. Tác giả khám phá những thay đổi trong kinh tế, chính trị và xã hội trong thời đại số.",
+            "category": 1,
+            "publisher": 9,
+            "author": "Thomas L. Friedman",
+            "price": 13.99,
+            "published_date": "2005-06-08",
+            "image": "books/thegioiphang.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 40,
+        "fields": {
+            "title": "Thiên Tài Bên Trái, Kẻ Điên Bên Phải",
+            "description": "Cuốn sách khám phá về sự sáng tạo và cách phát triển tư duy sáng tạo như Leonardo da Vinci. Tác giả chia sẻ những nguyên tắc và bài tập để khơi dậy tiềm năng sáng tạo trong mỗi người.",
+            "category": 1,
+            "publisher": 10,
+            "author": "Michael J. Gelb",
+            "price": 11.99,
+            "published_date": "1995-06-08",
+            "image": "books/thientaibentraikedienbenphai.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 41,
+        "fields": {
+            "title": "Tìm Mình Trong Thế Giới Hậu Tuổi Thơ",
+            "description": "Cuốn sách khám phá về quá trình trưởng thành và tìm kiếm bản thân trong thế giới hiện đại. Tác giả chia sẻ những góc nhìn sâu sắc về cuộc sống và cách sống có ý nghĩa.",
+            "category": 1,
+            "publisher": 11,
+            "author": "Đặng Hoàng Giang",
+            "price": 9.99,
+            "published_date": "2017-06-08",
+            "image": "books/timminhtrongthegioihautuoitho.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 42,
+        "fields": {
+            "title": "Trại Trẻ Đặc Biệt Của Cô Peregrine",
+            "description": "A book about the history of humanity, from the Stone Age to the present day. The book explores themes of evolution, technology, and the future of humanity. This book is a must-read for anyone who wants to understand the history of humanity.",
+            "category": 5,
+            "publisher": 12,
+            "author": "Ransom Riggs",
+            "price": 10.49,
+            "published_date": "2012-06-08",
+            "image": "books/traitredacbietcuacoperegrine.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 43,
+        "fields": {
+            "title": "Tôi Đã Kiếm Một Triệu Đô La Trên Internet Như Thế Nào",
+            "description": "Cuốn sách chia sẻ kinh nghiệm thực tế về cách kiếm tiền online và xây dựng sự nghiệp trên internet. Tác giả đưa ra những chiến lược và bài học quý giá cho những ai muốn thành công trong thời đại số.",
+            "category": 1,
+            "publisher": 13,
+            "author": "Steve Pavlina",
+            "price": 12.99,
+            "published_date": "2008-06-08",
+            "image": "books/toidakiemmottrieudolandautreninternetnhuthenao.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 44,
+        "fields": {
+            "title": "Tôi Tài Giỏi Bạn Cũng Thế",
+            "description": "Tiểu thuyết lãng mạn về tình yêu tuổi trẻ và những kỷ niệm đẹp của thời học sinh. Tác phẩm đưa độc giả trở về với những cảm xúc trong sáng và ngây thơ của tuổi thanh xuân.",
+            "category": 6,
+            "publisher": 14,
+            "author": "Nguyễn Nhật Ánh",
+            "price": 8.99,
+            "published_date": "2014-06-08",
+            "image": "books/toitaigioibancungthe.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 45,
+        "fields": {
+            "title": "To Kill a Mockingbird",
+            "description": "A powerful novel about racial injustice in the American South, told through the eyes of young Scout Finch. The novel explores themes of racism, justice, and the loss of innocence.",
+            "category": 2,
+            "publisher": 15,
+            "author": "Harper Lee",
+            "price": 10.99,
+            "published_date": "1960-06-08",
+            "image": "books/tokillamockingbird.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 46,
+        "fields": {
+            "title": "Tuổi Trẻ Đáng Giá Bao Nhiêu",
+            "description": "Cuốn sách truyền cảm hứng về việc sống trọn vẹn tuổi trẻ và theo đuổi ước mơ. Tác giả chia sẻ những trải nghiệm du lịch và bài học cuộc sống để giúp độc giả sống có ý nghĩa hơn.",
+            "category": 1,
+            "publisher": 1,
+            "author": "Rosie Nguyễn",
+            "price": 9.99,
+            "published_date": "2016-06-08",
+            "image": "books/tuoitredanggiabaonhieu.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 47,
+        "fields": {
+            "title": "Dám Bị Ghét",
+            "description": "Dưới hình thức một cuộc đối thoại giữa Chàng thanh niên và Triết gia, DÁM BỊ GHÉT trình bày một cách sinh động và hấp dẫn những nét chính trong tư tưởng của nhà tâm lý học Alfred Adler, người được mệnh danh là một trong \"ba người khổng lồ của tâm lý học hiện đại, sánh ngang với Freud và Jung.",
+            "category": 1,
+            "publisher": 2,
+            "author": "Ichiro Kishimi",
+            "price": 7.99,
+            "published_date": "1994-06-08",
+            "image": "books/dambighet.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 48,
+        "fields": {
+            "title": "Vượt Lên Chính Mình",
+            "description": "Cuốn sách về cách vượt qua những trở ngại và phát triển bản thân. Tác giả chia sẻ những nguyên tắc và kỹ năng để thành công trong cuộc sống và công việc.",
+            "category": 1,
+            "publisher": 3,
+            "author": "Dale Carnegie",
+            "price": 8.99,
+            "published_date": "1936-06-08",
+            "image": "books/vuotlenchinhminh.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 49,
+        "fields": {
+            "title": "Vụ Trộm Trong Vỏ Hạt Dẻ",
+            "description": "Tiểu thuyết trinh thám nổi tiếng của Agatha Christie, kể về vụ án mạng bí ẩn với thám tử Hercule Poirot. Câu chuyện đầy những tình tiết bất ngờ và logic sắc bén.",
+            "category": 2,
+            "publisher": 4,
+            "author": "Agatha Christie",
+            "price": 9.49,
+            "published_date": "1941-06-08",
+            "image": "books/vutrutrongvohatde.jpg",
+            "language": "Vietnamese",
+            "stock": 100
+        }
+    },
+    {
+        "model": "products.Book",
+        "pk": 50,
+        "fields": {
+            "title": "War and Peace",
+            "description": "A monumental novel about Russian society during the Napoleonic Wars. The novel explores themes of war, peace, love, and the human condition through the lives of several aristocratic families.",
+            "category": 2,
+            "publisher": 5,
+            "author": "Leo Tolstoy",
+            "price": 18.99,
+            "published_date": "1869-06-08",
+            "image": "books/warandpeace.jpg",
+            "language": "English",
+            "stock": 100
+        }
+    }
+]

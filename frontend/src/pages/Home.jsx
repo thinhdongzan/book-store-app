@@ -20,11 +20,14 @@ function Home() {
         });
     }, []);
 
+    const bestSellers = booksData.slice(0, 4);
+    const recommendations = booksData.slice(4, 12);
+
     return (
         <div className="home-container">
             <HeroBanner />
-            <BookList title="Best Sellers" books={booksData} />
-            <BookList title="Recommendations for You" books={booksData} />
+            <BookList title="Best Sellers" books={bestSellers} />
+            <BookList title="Recommendations for You" books={recommendations} />
             <CustomerReview />
             <WhyBuyFromUs />
             <Benefit />

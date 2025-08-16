@@ -46,22 +46,16 @@ const CartPage = () => {
     }
 
     return (
-        <>
-        <div className={styles.cartPageHeader}>
-            <h3>Product</h3>
-            <h3>Price</h3>
-            <h3>Qty</h3>
-            <h3>Subtotal</h3>
-        </div>
-        <div className={styles.cartPageContainer}>
-            <div className={styles.cartDetailBody}>
-                {cart.map((item) => (
-                    <CartItem key={item.id} item={item} handleRemoveFromCart={handleRemoveFromCart} handleIncreaseAmount={handleIncreaseAmount} handleDecreaseAmount={handleDecreaseAmount} />
-                ))}
+        <div className="flex flex-col items-center mt-10">
+            <div className={styles.cartPageContainer}>
+                <div className={styles.cartDetailBody}>
+                    {cart.map((item) => (
+                        <CartItem key={item.id} item={item} handleRemoveFromCart={handleRemoveFromCart} handleIncreaseAmount={handleIncreaseAmount} handleDecreaseAmount={handleDecreaseAmount} />
+                    ))}
+                </div>
+                <CartSummary subtotal={cart.reduce((acc, item) => acc + item.price * item.amount, 0).toFixed(2)} />
             </div>
-            <CartSummary subtotal={cart.reduce((acc, item) => acc + item.price * item.amount, 0).toFixed(2)} />
         </div>
-        </>
     );
 
 
