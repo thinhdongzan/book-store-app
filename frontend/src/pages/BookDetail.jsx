@@ -13,6 +13,7 @@ function addToCart(book, amount) {
     } else {
         cart.push({ ...book, amount });
     }
+
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
@@ -31,7 +32,6 @@ const BookDetail = () => {
             setLoading(false);
         });
     }, [id]);
-
     const [amount, setAmount] = useState(1);
 
     const handleAmount = (type) => {
