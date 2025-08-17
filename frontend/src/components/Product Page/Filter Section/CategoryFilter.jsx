@@ -9,7 +9,7 @@ const categories = [
     "Romance",
 ]
 
-const CategoryFilter = () => {
+const CategoryFilter = ({ filters, setFilters }) => {
     return (
         <div className={styles.filterGroup}>
             <h3>Category</h3>
@@ -17,7 +17,7 @@ const CategoryFilter = () => {
                 {categories.map((category, index) => (
                     <div key={index} className={styles.filterOption}>
                         <label>
-                            <input type="checkbox" id={category} name={category} />
+                            <input type="checkbox" id={category} name={category} checked={filters.category === category} onChange={(e) => setFilters({ ...filters, category: e.target.checked ? category : "" })} />
                             <span className={styles.checkmark}></span>
                             {category}
                         </label>

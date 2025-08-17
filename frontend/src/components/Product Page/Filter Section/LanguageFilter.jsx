@@ -1,9 +1,10 @@
 import styles from "./FilterGroup.module.css";
 const languages = [
-    "English",
-    "Vietnamese"
+    { label: "English", value: "English" },
+    { label: "Vietnamese", value: "Vietnamese" }
 ]
-const LanguageFilter = () => {
+
+const LanguageFilter = ({ filters, setFilters }) => {
     return (
         <div className={styles.filterGroup}>
             <h3>Language</h3>
@@ -11,9 +12,15 @@ const LanguageFilter = () => {
                 {languages.map((language, index) => (
                     <div key={index} className={styles.filterOption}>
                         <label>
-                            <input type="checkbox" id={language} name={language} />
+                            <input 
+                                type="checkbox" 
+                                id={language.value} 
+                                name={language.value} 
+                                checked={filters.language === language.value} 
+                                onChange={(e) => setFilters({ ...filters, language: e.target.checked ? language.value : "" })} 
+                            />
                             <span className={styles.checkmark}></span>
-                            {language}
+                            {language.label}
                         </label>
                     </div>
                 ))}

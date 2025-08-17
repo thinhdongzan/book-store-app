@@ -1,10 +1,16 @@
 import { useState } from "react";
 import styles from "./FilterGroup.module.css";
 
-const PriceFilter = () => {
+const PriceFilter = ({ filters, setFilters }) => {
+    const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(100);
     const handleMaxPriceChange = (e) => {
         setMaxPrice(e.target.value);
+        setFilters({ ...filters, price_max: e.target.value });
+    }
+
+    const applyFilter = () => {
+        setFilters({ ...filters, price_min: minPrice, price_max: maxPrice });
     }
 
     return (

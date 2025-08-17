@@ -7,7 +7,7 @@ const CartItem = ({ item, handleRemoveFromCart, handleIncreaseAmount, handleDecr
     return (
         <>
         <div className={styles.cartItem}>
-            <img src={item.img} alt={item.title} />
+            <img src={item.image} alt={item.title} />
             <h3>{item.title}</h3>
             <p className={styles.cartItemPrice}>{item.price} $</p>
             <div className={styles.cartItemQuantity}>

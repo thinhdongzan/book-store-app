@@ -17,7 +17,7 @@ const publishers = [
     {name: "Hachette Book Group"}
 ];
 
-const PublisherFilter = () => {
+const PublisherFilter = ({ filters, setFilters }) => {
     return (
         <div className={styles.filterGroup}>
             <h3>Publisher</h3>
@@ -25,7 +25,7 @@ const PublisherFilter = () => {
                 {publishers.map((publisher, index) => (
                     <div key={index} className={styles.filterOption}>
                         <label>
-                            <input type="checkbox" id={publisher.name} name={publisher.name} />
+                            <input type="checkbox" id={publisher.name} name={publisher.name} checked={filters.publisher === publisher.name} onChange={(e) => setFilters({ ...filters, publisher: e.target.checked ? publisher.name : "" })} />
                             <span className={styles.checkmark}></span>
                             {publisher.name}
                         </label>

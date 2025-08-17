@@ -3,17 +3,17 @@ import PriceFilter from "./PriceFilter";
 import LanguageFilter from "./LanguageFilter";
 import PublisherFilter from "./PublisherFilter";
 import styles from "./FilterSidebar.module.css";
-function FilterSidebar() {
+function FilterSidebar({ filters, setFilters }) {
     return (
         <div className={styles.filterSection}>
             <h2>Filter Options</h2>
-            <CategoryFilter />
+            <CategoryFilter filters={filters} setFilters={setFilters}/>
             <hr />
-            <PriceFilter />
+            <PriceFilter/>
             <hr />
-            <LanguageFilter />
+            <LanguageFilter filters={filters} setFilters={setFilters}/>
             <hr />
-            <PublisherFilter />
+            <PublisherFilter filters={filters} setFilters={setFilters}/>
         </div>
     );
 }
