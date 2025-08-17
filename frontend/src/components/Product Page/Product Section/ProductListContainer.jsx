@@ -25,7 +25,7 @@ function ProductListContainer({ filters }) {
                 if (filters.price_min) params.append("price_min", filters.price_min);
                 if (filters.price_max) params.append("price_max", filters.price_max);
 
-                const apiUrl = `http://localhost:8000/api/books/?${params.toString()}`;
+                const apiUrl = `${process.env.REACT_APP_API_URL}/books/?${params.toString()}`;
                 console.log("Fetching books with URL:", apiUrl); // Debug log
                 const response = await axios.get(apiUrl);
 
@@ -35,7 +35,7 @@ function ProductListContainer({ filters }) {
                 console.error("Error fetching books:", error);
                 // Fallback to all books if filter fails
                 try {
-                    const fallbackResponse = await axios.get('http://localhost:8000/api/books/');
+                    const fallbackResponse = await axios.get(`${process.env.REACT_APP_API_URL}/books/`);
                     setBooks(fallbackResponse.data);
                 } catch (fallbackError) {
                     console.error("Fallback also failed:", fallbackError);

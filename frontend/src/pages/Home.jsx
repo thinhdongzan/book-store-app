@@ -12,7 +12,7 @@ function Home() {
     const [booksData, setBooksData] = useState([]);
 
     useEffect(() => {
-        const apiUrl = "http://localhost:8000/api/books/";
+        const apiUrl = `${process.env.REACT_APP_API_URL}/books/`;
         axios.get(apiUrl).then(response => {
             setBooksData(response.data);
         }).catch(error => {
