@@ -3,7 +3,6 @@ import ProductGrid from "./ProductGrid";
 import Pagination from "./Pagination";
 import styles from "./ProductListContainer.module.css";
 import { useEffect, useState } from "react";
-import bookData from "../../../data/books.json";
 import axios from "axios";
 
 function ProductListContainer() {

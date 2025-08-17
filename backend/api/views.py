@@ -1,13 +1,13 @@
 from rest_framework import generics
 from products.models import Book
 from .serializers import BookSerializer
+from rest_framework import viewsets
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from django.shortcuts import get_object_or_404
 
-
-class BookList(generics.ListCreateAPIView):
-    queryset = Book.objects.all()
+class BookList(viewsets.ModelViewSet):
+    permission_classes = [AllowAny]
     serializer_class = BookSerializer
-
-class BookDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
-    serializer_class = BookSerializer
-
+    lookup_field = 'pk'  # Use 'pk' as the lookup field
