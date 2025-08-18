@@ -11,27 +11,77 @@ This project is designed as a full-stack application using **React** for the fro
 - 🔎 Search and filter books by category, price, rating, etc.
 - 🛒 Add books to cart and manage quantity
 - 💳 Checkout and order confirmation
-- 🧾 Order history for logged-in users
 
 ---
 
-## 🧰 Tech Stack
+## 🛠️ Tech Stack
 
-### Frontend
+- Frontend: **React(Hook)**, **Tailwind CSS** for styling
+- Backend: **Django**, **Django REST Framework**
+- Database: **SQLite**
+- Deployment: **Vercel** (frontend) + **Render** (backend hosting)
 
-- **React**
-- **React Router DOM**
-- **Axios** for HTTP requests
+---
 
-### Backend
+## 🚀 Quick Start
 
-- **Django**
-- **Django REST Framework**
-- **PostgreSQL** (or SQLite for development)
-- **Simple JWT** for authentication
+```bash
+# Clone repository
+git clone https://github.com/<your-username>/book-store-app.git
+cd book-store-app
 
-### Others
+# ======================
+# Backend Setup (Django)
+# ======================
+cd backend
 
-- **Git** for version control
-- **Vercel** for frontend deployment
-- **Render** for backend hosting
+# Create virtual environment
+python -m venv env
+
+# Activate virtual environment
+source env/bin/activate      # macOS/Linux
+env\Scripts\activate         # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run migrations
+python manage.py migrate
+
+# Start backend server (http://127.0.0.1:8000)
+python manage.py runserver
+
+# ======================
+# Frontend Setup (React)
+# ======================
+cd ../frontend
+
+# Install dependencies
+npm install
+
+# Start frontend server (http://localhost:3000)
+npm run dev
+```
+
+---
+
+## 🌐 Demo
+
+You can try the live version of the app here:  
+👉 [BookStore App](https://book-store-app-two-chi.vercel.app)
+
+### 🔎 Screenshots
+
+#### 🏠 Homepage
+
+![Homepage](./assets/demo/homepage1.png)
+![Homepage](./assets/demo/homepage2.png)
+![Homepage](./assets/demo/homepage3.png)
+
+#### 📚 Book Details
+
+![Book Details](./assets/demo/book-details.png)
+
+#### 🛒 Shopping Cart
+
+![Shopping Cart](./assets/demo/cart.png)
