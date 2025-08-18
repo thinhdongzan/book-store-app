@@ -5,15 +5,14 @@ import Benefit from "../components/BenefitOfReadingSection/Benefit";
 import HeroBanner from "../components/HeroSection/HeroBanner";
 import "./Home.css";
 import { useEffect } from "react";
-import axios from "axios";
 import { useState } from "react";
+import axiosInstance from "../api/axios";
 
 function Home() {
     const [booksData, setBooksData] = useState([]);
 
     useEffect(() => {
-        const apiUrl = `${process.env.REACT_APP_API_URL}/books/`;
-        axios.get(apiUrl).then(response => {
+        axiosInstance.get('books/').then(response => {
             setBooksData(response.data);
         }).catch(error => {
             console.error("Error fetching books:", error);

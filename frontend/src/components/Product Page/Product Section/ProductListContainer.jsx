@@ -3,7 +3,7 @@ import ProductGrid from "./ProductGrid";
 import Pagination from "./Pagination";
 import styles from "./ProductListContainer.module.css";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance from "../../../api/axios";
 
 function ProductListContainer({ filters }) {
     const [books, setBooks] = useState([]); // Initialize with empty array
@@ -25,9 +25,9 @@ function ProductListContainer({ filters }) {
                 if (filters.price_min) params.append("price_min", filters.price_min);
                 if (filters.price_max) params.append("price_max", filters.price_max);
 
-                const apiUrl = `${process.env.REACT_APP_API_URL}/books/?${params.toString()}`;
-                console.log("Fetching books with URL:", apiUrl); // Debug log
-                const response = await axios.get(apiUrl);
+                const url = `books/?${params.toString()}`;
+                console.log("Fetching books with URL:", axiosInstance.defaults.baseURL + url); // Debug log
+                const response = await axiosInstance.get(url);
 
                 console.log("Filtered books count:", response.data.length); // Debug log
                 setBooks(response.data);
@@ -35,7 +35,7 @@ function ProductListContainer({ filters }) {
                 console.error("Error fetching books:", error);
                 // Fallback to all books if filter fails
                 try {
-                    const fallbackResponse = await axios.get(`${process.env.REACT_APP_API_URL}/books/`);
+                    const fallbackResponse = await axiosInstance.get('books/');
                     setBooks(fallbackResponse.data);
                 } catch (fallbackError) {
                     console.error("Fallback also failed:", fallbackError);
