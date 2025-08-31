@@ -17,6 +17,55 @@ function addToCart(book, amount) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+// Skeleton Loading Component
+const BookDetailSkeleton = () => {
+    return (
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-8">
+            {/* Breadcrumb Skeleton */}
+            <div className="mb-8">
+                <div className="h-6 bg-gray-200 rounded w-48 animate-pulse"></div>
+            </div>
+            
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                {/* Image Skeleton */}
+                <div className="w-full lg:w-1/2">
+                    <div className="bg-gray-200 rounded-lg h-96 lg:h-[500px] animate-pulse"></div>
+                </div>
+                
+                {/* Content Skeleton */}
+                <div className="w-full lg:w-1/2 space-y-6">
+                    {/* Title Skeleton */}
+                    <div className="space-y-3">
+                        <div className="h-8 bg-gray-200 rounded w-3/4 animate-pulse"></div>
+                        <div className="h-6 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+                    </div>
+                    
+                    {/* Price Skeleton */}
+                    <div className="h-8 bg-gray-200 rounded w-24 animate-pulse"></div>
+                    
+                    {/* Description Skeleton */}
+                    <div className="space-y-3">
+                        <div className="h-4 bg-gray-200 rounded w-full animate-pulse"></div>
+                        <div className="h-4 bg-gray-200 rounded w-full animate-pulse"></div>
+                        <div className="h-4 bg-gray-200 rounded w-3/4 animate-pulse"></div>
+                        <div className="h-4 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+                    </div>
+                    
+                    {/* Quantity Controls Skeleton */}
+                    <div className="flex items-center space-x-4">
+                        <div className="h-10 bg-gray-200 rounded w-10 animate-pulse"></div>
+                        <div className="h-10 bg-gray-200 rounded w-16 animate-pulse"></div>
+                        <div className="h-10 bg-gray-200 rounded w-10 animate-pulse"></div>
+                    </div>
+                    
+                    {/* Add to Cart Button Skeleton */}
+                    <div className="h-12 bg-gray-200 rounded-lg w-full animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const BookDetail = () => {
     const { id } = useParams();
     const [book, setBook] = useState(null);
@@ -32,6 +81,7 @@ const BookDetail = () => {
             setLoading(false);
         });
     }, [id]);
+    
     const [amount, setAmount] = useState(1);
 
     const handleAmount = (type) => {
@@ -54,11 +104,17 @@ const BookDetail = () => {
     }
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <BookDetailSkeleton />;
     }
 
     if (!book) {
-        return <div>Book not found</div>;
+        return (
+            <div className="max-w-7xl mx-auto px-4 lg:px-8 py-16 text-center">
+                <div className="text-gray-500 text-xl">
+                    Book not found
+                </div>
+            </div>
+        );
     }
 
     return (

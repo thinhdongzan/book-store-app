@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import styles from "./CartPage.module.css";
 import CartItem from "./CartItem";
 import CartSummary from "./CartSummary";
 
@@ -24,7 +23,7 @@ const CartPage = () => {
             if (item.id === id) {
                 return { ...item, amount: item.amount + 1 };
             }
-            return item; // Trả về item gốc nếu không phải item cần tăng
+            return item;
         });
         setCart(newCart);
         localStorage.setItem("cart", JSON.stringify(newCart));
@@ -39,26 +38,42 @@ const CartPage = () => {
                     return { ...item, amount: 1 };
                 }
             }
-            return item; // Trả về item gốc nếu không phải item cần giảm
+            return item;
         });
         setCart(newCart);
         localStorage.setItem("cart", JSON.stringify(newCart));
     }
 
     return (
-        <div className="flex flex-col items-center mt-10">
-            <div className={styles.cartPageContainer}>
-                <div className={styles.cartDetailBody}>
-                    {cart.map((item) => (
-                        <CartItem key={item.id} item={item} handleRemoveFromCart={handleRemoveFromCart} handleIncreaseAmount={handleIncreaseAmount} handleDecreaseAmount={handleDecreaseAmount} />
-                    ))}
-                </div>
+        <div className="flex flex-col lg:flex-row items-start justify-center gap-8 mt-10 px-4 lg:px-8 max-w-7xl mx-auto">
+            {/* Cart Items Section */}
+            <div className="w-full lg:w-2/3 space-y-4">
+                <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-6">Shopping Cart</h2>
+                {cart.length === 0 ? (
+                    <div className="text-center py-12">
+                        <p className="text-gray-500 text-lg">Your cart is empty</p>
+                    </div>
+                ) : (
+                    <div className="space-y-4">
+                        {cart.map((item) => (
+                            <CartItem 
+                                key={item.id} 
+                                item={item} 
+                                handleRemoveFromCart={handleRemoveFromCart} 
+                                handleIncreaseAmount={handleIncreaseAmount} 
+                                handleDecreaseAmount={handleDecreaseAmount} 
+                            />
+                        ))}
+                    </div>
+                )}
+            </div>
+            
+            {/* Cart Summary Section */}
+            <div className="w-full lg:w-1/3">
                 <CartSummary subtotal={cart.reduce((acc, item) => acc + item.price * item.amount, 0).toFixed(2)} />
             </div>
         </div>
     );
-
-
 }
 
 export default CartPage;
