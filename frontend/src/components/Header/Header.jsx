@@ -137,6 +137,7 @@ function Header() {
                                     className="text-gray-700 hover:text-orange-600 transition-colors font-semibold text-lg flex items-center space-x-2"
                                 >
                                     <span>Product</span>
+                                    <FontAwesomeIcon icon={faChevronDown} className="text-sm" />
                                 </button>
                                 {isProductMenuOpen && (
                                     <ul className="absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-xl py-3 min-w-52 z-50">
