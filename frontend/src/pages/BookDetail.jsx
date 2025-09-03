@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import BreadCump from "../components/BreadCump/BreadCump";
-import styles from "./BookDetail.module.css";
 import { useState, useEffect } from "react";
 import Toast from "../components/Toast";
 import axiosInstance from "../api/axios.js";
@@ -120,21 +119,70 @@ const BookDetail = () => {
     return (
         <div>
             <BreadCump page={book.title} />
-            <div className={styles.bookDetail}>
-                <div className={styles.bookDetail_img}>
-                    <img src={book.image} alt={book.title} />
-                </div>
-                <div className={styles.bookDetail_info}>
-                    <h1>{book.title}</h1>
-                    <p>{book.author}</p>
-                    <p>{book.price} $</p>
-                    <p>{book.description}</p>
-                    <div className={styles.bookAmount}>
-                        <button onClick={() => handleAmount("decrease")} className={styles.leftButton}>-</button>
-                        <span>{amount}</span>
-                        <button onClick={() => handleAmount("increase")} className={styles.rightButton}>+</button>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12">
+                <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
+                    {/* Book Image */}
+                    <div className="w-full lg:w-1/2 flex justify-center">
+                        <div className="w-full max-w-md lg:max-w-lg">
+                            <img 
+                                src={book.image} 
+                                alt={book.title}
+                                className="w-full h-auto rounded-lg shadow-lg object-cover"
+                            />
+                        </div>
                     </div>
-                    <button className={styles.addToCart} onClick={handleAddToCart}>Add to Cart</button>
+                    
+                    {/* Book Info */}
+                    <div className="w-full lg:w-1/2 flex flex-col space-y-4 lg:space-y-6">
+                        <div className="space-y-2 lg:space-y-3">
+                            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight">
+                                {book.title}
+                            </h1>
+                            <p className="text-lg sm:text-xl text-gray-600">
+                                {book.author}
+                            </p>
+                            <p className="text-2xl sm:text-3xl font-bold text-red-600">
+                                {book.price} $
+                            </p>
+                        </div>
+                        
+                        <div className="space-y-3">
+                            <h3 className="text-lg font-medium text-gray-900">Description:</h3>
+                            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                                {book.description}
+                            </p>
+                        </div>
+                        
+                        {/* Quantity Controls */}
+                        <div className="flex items-center space-x-2">
+                            <span className="text-sm sm:text-base font-medium text-gray-700">Số lượng:</span>
+                            <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                                <button 
+                                    onClick={() => handleAmount("decrease")}
+                                    className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium transition-colors"
+                                >
+                                    -
+                                </button>
+                                <span className="w-12 sm:w-16 h-10 sm:h-12 flex items-center justify-center bg-white border-x border-gray-300 text-sm sm:text-base font-medium">
+                                    {amount}
+                                </span>
+                                <button 
+                                    onClick={() => handleAmount("increase")}
+                                    className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium transition-colors"
+                                >
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                        
+                        {/* Add to Cart Button */}
+                        <button 
+                            className="w-full h-12 sm:h-14 bg-[#FDAD16] hover:bg-[#E69600] text-black font-semibold text-base sm:text-lg rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+                            onClick={handleAddToCart}
+                        >
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
             </div>
             {showToast && <Toast message="Added to Cart Successfully" onClose={() => setShowToast(false)} />}
