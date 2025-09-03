@@ -44,6 +44,11 @@ const CartPage = () => {
         localStorage.setItem("cart", JSON.stringify(newCart));
     }
 
+    const handleClearCart = () => {
+        setCart([]);
+        localStorage.setItem("cart", JSON.stringify([]));
+    }
+
     return (
         <div className="flex flex-col lg:flex-row items-start justify-center gap-8 mt-10 px-4 lg:px-8 max-w-7xl mx-auto">
             {/* Cart Items Section */}
@@ -70,7 +75,10 @@ const CartPage = () => {
             
             {/* Cart Summary Section */}
             <div className="w-full lg:w-1/3">
-                <CartSummary subtotal={cart.reduce((acc, item) => acc + item.price * item.amount, 0).toFixed(2)} />
+                <CartSummary 
+                    subtotal={cart.reduce((acc, item) => acc + item.price * item.amount, 0).toFixed(2)} 
+                    onCheckout={handleClearCart}
+                />
             </div>
         </div>
     );

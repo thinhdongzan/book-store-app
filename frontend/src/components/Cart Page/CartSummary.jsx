@@ -1,10 +1,14 @@
 import { useState } from "react";
 import Toast from "../Toast";
 
-const CartSummary = ({subtotal}) => {
+const CartSummary = ({subtotal, onCheckout}) => {
     const [showToast, setShowToast] = useState(false);
     
     const handleCheckOut = () => {
+        // Clear the cart
+        onCheckout();
+        
+        // Show success toast
         setShowToast(true);
         setTimeout(() => {
             setShowToast(false);
