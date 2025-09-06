@@ -34,37 +34,66 @@ function Login() {
     };
 
     return (
-        <div className="flex justify-center items-center h-screen">
-            <div className="w-1/2 h-full bg-cover bg-center" style={{ backgroundImage: `url(${background})` }}>
+        <div className="flex flex-col md:flex-row justify-center items-center min-h-screen">
+            {/* Background Image - Hidden on mobile, visible on desktop */}
+            <div className="hidden md:block w-1/2 h-screen bg-cover bg-center" style={{ backgroundImage: `url(${background})` }}>
             </div>
-            <div className="w-1/2 h-full bg-white p-20">
-                <div className="flex items-center justify-start">
-                    <a href="/" className="text-sm text-gray-500">Back to Home</a>
+            
+            {/* Login Form */}
+            <div className="w-full md:w-1/2 h-screen bg-white p-4 sm:p-8 md:p-20 flex flex-col">
+                <div className="flex items-center justify-start mb-4">
+                    <a href="/" className="text-sm text-gray-500 hover:text-gray-700">← Back to Home</a>
                 </div>
-                <div className="flex flex-col items-center justify-center h-full">
-                    <h1 className="text-2xl font-bold">Login</h1>
-                    <h2 className="text-sm text-gray-500">Welcome back to our website</h2>
-                    <form className="flex flex-col gap-2 w-full">
+                
+                <div className="flex flex-col items-center justify-center flex-1 max-w-md mx-auto w-full">
+                    <h1 className="text-3xl md:text-2xl font-bold mb-2">Login</h1>
+                    <h2 className="text-sm text-gray-500 mb-8 text-center">Welcome back to our website</h2>
+                    
+                    <form className="flex flex-col gap-4 w-full">
                         <div className="flex flex-col gap-2">
-                            <label htmlFor="username">Username</label>
-                            <input className="border-2 border-gray-300 rounded-md p-2 focus:border-blue-500 focus:outline-none" type="text" id="username" name="username" onChange={handleChange} />
+                            <label htmlFor="username" className="text-sm font-medium text-gray-700">Username</label>
+                            <input 
+                                className="border-2 border-gray-300 rounded-md p-3 focus:border-blue-500 focus:outline-none text-base" 
+                                type="text" 
+                                id="username" 
+                                name="username" 
+                                onChange={handleChange}
+                                placeholder="Enter your username"
+                            />
                         </div>
+                        
                         <div className="flex flex-col gap-2">
-                            <label htmlFor="password">Password</label>
-                            <input className="border-2 border-gray-300 rounded-md p-2 focus:border-blue-500 focus:outline-none" type="password" id="password" name="password" onChange={handleChange} />
+                            <label htmlFor="password" className="text-sm font-medium text-gray-700">Password</label>
+                            <input 
+                                className="border-2 border-gray-300 rounded-md p-3 focus:border-blue-500 focus:outline-none text-base" 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                onChange={handleChange}
+                                placeholder="Enter your password"
+                            />
                         </div>
-                        <div className="flex items-center justify-between gap-2">
+                        
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                             <div className="flex items-center gap-2">
-                                <input type="checkbox" id="remember" name="remember" />
-                                <label htmlFor="remember">Remember me</label>
+                                <input type="checkbox" id="remember" name="remember" className="w-4 h-4" />
+                                <label htmlFor="remember" className="text-sm text-gray-600">Remember me</label>
                             </div>
-                            <a href="#" className="text-sm text-blue-500">Forgot password?</a>
+                            <a href="#" className="text-sm text-blue-500 hover:text-blue-700">Forgot password?</a>
                         </div>
-                        <button className="bg-blue-500 text-white rounded-md p-2 mt-4 hover:bg-blue-600" type="submit" onClick={handleSubmit}>Login</button>
+                        
+                        <button 
+                            className="bg-blue-500 text-white rounded-md p-3 mt-4 hover:bg-blue-600 transition-colors text-base font-medium" 
+                            type="submit" 
+                            onClick={handleSubmit}
+                        >
+                            Login
+                        </button>
                     </form>
-                    <div className="flex items-center justify-center gap-2 mt-4">
-                        <label className="text-sm text-gray-500">Don't have an account?</label>
-                        <a href="/register" className="text-blue-500">Register</a>
+                    
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-6 text-center">
+                        <span className="text-sm text-gray-500">Don't have an account?</span>
+                        <a href="/register" className="text-blue-500 hover:text-blue-700 font-medium">Register</a>
                     </div>
                 </div>
             </div>

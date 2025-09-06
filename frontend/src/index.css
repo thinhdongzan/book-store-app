@@ -46,3 +46,32 @@ iframe {
     height: auto;
 }
 
+/* Login/Register pages mobile improvements */
+@media (max-width: 768px) {
+    /* Ensure forms are properly sized on mobile */
+    .login-form, .register-form {
+        padding: 1rem;
+        min-height: 100vh;
+    }
+    
+    /* Better input sizing for mobile */
+    input[type="text"], 
+    input[type="password"], 
+    input[type="email"] {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px;
+    }
+    
+    /* Better button sizing for mobile */
+    button {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    /* Better spacing for mobile forms */
+    .form-container {
+        padding: 1rem;
+        max-width: 100%;
+    }
+}
+
