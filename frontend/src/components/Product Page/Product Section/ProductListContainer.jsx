@@ -2,13 +2,14 @@ import ProductHeader from "./ProductHeader";
 import ProductGrid from "./ProductGrid";
 import Pagination from "./Pagination";
 import styles from "./ProductListContainer.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import axiosInstance from "../../../api/axios";
 
 function ProductListContainer({ filters }) {
     const [books, setBooks] = useState([]); // Initialize with empty array
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
+    const [sortBy, setSortBy] = useState("newest");
     
     useEffect(() => {
         const fetchBooks = async () => {
@@ -50,9 +51,30 @@ function ProductListContainer({ filters }) {
     }, [filters]);
     
     const booksPerPage = 12; // 12 products per page: 3x4 on desktop, 2x6 on tablet, 1x12 on mobile
+
+    const sortedBooks = useMemo(() => {
+        if (!books) return [];
+        const cloned = [...books];
+        switch (sortBy) {
+            case "oldest":
+                return cloned.sort((a, b) => new Date(a.published_date) - new Date(b.published_date));
+            case "price_asc":
+                return cloned.sort((a, b) => Number(a.price) - Number(b.price));
+            case "price_desc":
+                return cloned.sort((a, b) => Number(b.price) - Number(a.price));
+            case "name_asc":
+                return cloned.sort((a, b) => String(a.title || "").localeCompare(String(b.title || "")));
+            case "name_desc":
+                return cloned.sort((a, b) => String(b.title || "").localeCompare(String(a.title || "")));
+            case "newest":
+            default:
+                return cloned.sort((a, b) => new Date(b.published_date) - new Date(a.published_date));
+        }
+    }, [books, sortBy]);
+
     const indexOfLastBook = currentPage * booksPerPage;
     const indexOfFirstBook = indexOfLastBook - booksPerPage;
-    const currentBooks = books ? books.slice(indexOfFirstBook, indexOfLastBook) : [];
+    const currentBooks = sortedBooks.slice(indexOfFirstBook, indexOfLastBook);
 
     if (loading) {
         return <div className={styles.productListContainer}>Loading...</div>;
@@ -63,7 +85,9 @@ function ProductListContainer({ filters }) {
             <ProductHeader 
                 currentPage={currentPage} 
                 booksPerPage={booksPerPage} 
-                totalBooks={books ? books.length : 0} 
+                totalBooks={books ? books.length : 0}
+                sortBy={sortBy}
+                onSortChange={setSortBy}
             />
             <hr />
             <ProductGrid books={currentBooks} />
