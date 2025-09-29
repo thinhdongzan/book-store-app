@@ -131,16 +131,19 @@ function Header() {
                             <a href="/" className="text-gray-700 hover:text-orange-600 transition-colors font-semibold text-lg">Home</a>
                             
                             {/* Product Dropdown */}
-                            <div className="relative dropdown-container">
+                            <div
+                                className="relative dropdown-container"
+                                onMouseEnter={() => setIsProductMenuOpen(true)}
+                                onMouseLeave={() => setIsProductMenuOpen(false)}
+                            >
                                 <button
-                                    onClick={toggleProductMenu}
                                     className="text-gray-700 hover:text-orange-600 transition-colors font-semibold text-lg flex items-center space-x-2"
+                                    onClick={() => navigate('/product')}
                                 >
                                     <span>Product</span>
-                                    <FontAwesomeIcon icon={faChevronDown} className="text-sm" />
                                 </button>
                                 {isProductMenuOpen && (
-                                    <ul className="absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-xl py-3 min-w-52 z-50">
+                                    <ul className="absolute top-full left-1/2 -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-xl py-3 min-w-52 z-50">
                                         <li><a href="/product?genre=novel" className="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600 text-gray-700 text-base" onClick={closeAllMenus}>Novel</a></li>
                                         <li><a href="/product?genre=comic" className="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600 text-gray-700 text-base" onClick={closeAllMenus}>Comic</a></li>
                                         <li><a href="/product?genre=fairytale" className="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600 text-gray-700 text-base" onClick={closeAllMenus}>Fairytale</a></li>
@@ -221,29 +224,14 @@ function Header() {
                                     </a>
                                 </li>
                                 
-                                {/* Product Menu */}
+                                {/* Product - direct navigate on mobile */}
                                 <li>
                                     <button
-                                        onClick={toggleProductMenu}
-                                        className="w-full text-left px-3 py-3 text-gray-700 hover:bg-orange-50 hover:text-[#FDAD16] rounded-lg transition-colors flex items-center justify-between text-lg font-medium"
+                                        onClick={() => { navigate('/product'); closeAllMenus(); }}
+                                        className="w-full text-left px-3 py-3 text-gray-700 hover:bg-orange-50 hover:text-[#FDAD16] rounded-lg transition-colors text-lg font-medium"
                                     >
-                                        <span>Product</span>
-                                        <FontAwesomeIcon 
-                                            icon={faChevronDown} 
-                                            className={`text-sm transition-transform ${isProductMenuOpen ? 'rotate-180' : ''}`} 
-                                        />
+                                        Product
                                     </button>
-                                    {isProductMenuOpen && (
-                                        <ul className="ml-4 mt-2 space-y-2">
-                                            <li><a href="/product?genre=novel" className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base" onClick={closeAllMenus}>Novel</a></li>
-                                            <li><a href="/product?genre=comic" className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base" onClick={closeAllMenus}>Comic</a></li>
-                                            <li><a href="/product?genre=fairytale" className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base" onClick={closeAllMenus}>Fairytale</a></li>
-                                            <li><a href="/product?genre=horror" className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base" onClick={closeAllMenus}>Horror</a></li>
-                                            <li><a href="/product?genre=selfhelp" className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base" onClick={closeAllMenus}>Self-help</a></li>
-                                            <li><a href="/product?genre=romance" className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base" onClick={closeAllMenus}>Romance</a></li>
-                                            <li><a href="/product?genre=adventure" className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base" onClick={closeAllMenus}>Adventure</a></li>
-                                        </ul>
-                                    )}
                                 </li>
                                 
                                 <li>
@@ -252,35 +240,14 @@ function Header() {
                                     </a>
                                 </li>
                                 
-                                {/* Account Menu */}
+                                {/* Account - direct navigate on mobile */}
                                 <li>
                                     <button
-                                        onClick={toggleAccountMenu}
-                                        className="w-full text-left px-3 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors flex items-center justify-between text-lg font-medium"
+                                        onClick={() => { navigate('/login'); closeAllMenus(); }}
+                                        className="w-full text-left px-3 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-lg font-medium"
                                     >
-                                        <span className="flex items-center space-x-2">
-                                            <span>Account</span>
-                                        </span>
-                                        <FontAwesomeIcon 
-                                            icon={faChevronDown} 
-                                            className={`text-sm transition-transform ${isAccountMenuOpen ? 'rotate-180' : ''}`} 
-                                        />
+                                        Account
                                     </button>
-                                    {isAccountMenuOpen && (
-                                        <ul className="ml-4 mt-2 space-y-2">
-                                            {isLoggedIn ? (
-                                                <>
-                                                    <li><a href="#" className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base" onClick={closeAllMenus}>Profile</a></li>
-                                                    <li><a href="#" onClick={(e) => { e.preventDefault(); handleLogout(); closeAllMenus(); }} className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base">Logout</a></li>
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <li><a href="/login" className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base" onClick={closeAllMenus}>Login</a></li>
-                                                    <li><a href="/register" className="block px-3 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors text-base" onClick={closeAllMenus}>Register</a></li>
-                                                </>
-                                            )}
-                                        </ul>
-                                    )}
                                 </li>
                             </ul>
                         </nav>
