@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const DEFAULT_BASE_URL = 'https://book-store-app-production-831b.up.railway.app/api';
+const DEFAULT_BASE_URL = 'https://book-store-app-gvmk.onrender.com/api';
 const BASE_URL = (import.meta?.env?.VITE_API_URL || DEFAULT_BASE_URL).replace(/\/$/, '');
 
 const accessToken = localStorage.getItem('access_token');
